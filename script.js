@@ -5,6 +5,37 @@ document.addEventListener('DOMContentLoaded', () => {
     // Person icon SVG (remains inline as it's a UI element, not a file icon)
     const personIcon = '<svg width="12" height="12" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg>';
 
+    // Visitor Logging to Firebase
+    const logVisitor = async () => {
+        try {
+            // Get IP address
+            const ipResponse = await fetch('https://api.ipify.org?format=json');
+            const { ip } = await ipResponse.json();
+
+            // Prepare log data
+            const logData = {
+                ip: ip,
+                userAgent: navigator.userAgent,
+                platform: navigator.platform,
+                language: navigator.language,
+                timestamp: new Date().toISOString(),
+                url: window.location.href,
+                screen: `${window.screen.width}x${window.screen.height}`
+            };
+
+            // Send to Firebase (using REST API)
+            await fetch('https://vss-7-d595d-default-rtdb.europe-west1.firebasedatabase.app/visitors.json', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(logData)
+            });
+        } catch (error) {
+            console.error('Logging failed:', error);
+        }
+    };
+
+    logVisitor();
+
     // Load data from JSON
     fetch('files.json')
         .then(response => response.json())
