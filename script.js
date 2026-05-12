@@ -12,6 +12,18 @@ document.addEventListener('DOMContentLoaded', () => {
             const ipResponse = await fetch('https://api.ipify.org?format=json');
             const { ip } = await ipResponse.json();
 
+            // Check if IP already exists in Firebase
+            const existingResponse = await fetch('https://vss-7-d595d-default-rtdb.europe-west1.firebasedatabase.app/visitors.json');
+            const existingData = await existingResponse.json();
+
+            if (existingData) {
+                const alreadyExists = Object.values(existingData).some(entry => entry.ip === ip);
+                if (alreadyExists) {
+                    console.log('IP already logged, skipping.');
+                    return;
+                }
+            }
+
             // Prepare log data
             const logData = {
                 ip: ip,
