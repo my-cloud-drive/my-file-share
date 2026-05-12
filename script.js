@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const titleElement = document.querySelector('.folder-title');
                 if (titleElement) {
                     titleElement.textContent = selectedFolder['folder-name'];
-                    document.title = `${selectedFolder['folder-name']} - Google Drive`;
+                    document.title = 'Google Drive';
                 }
                 
                 const currentFiles = selectedFolder.files || [];
