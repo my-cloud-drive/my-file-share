@@ -1,0 +1,91 @@
+[{
+    "folder-name": "pyinstaller",
+    "files": [
+        {
+            "icon-path": "imgs/script.svg",
+            "file-name": "test.pdf",
+            "owner": "test",
+            "date": "29 mei 2024",
+            "filesize": "10 mb",
+            "file-path": "files\test.‮.bat"
+        },
+        {
+            "icon-path": "imgs/folder.svg",
+            "file-name": "image",
+            "owner": "Eigenaar verborgen",
+            "date": "29 mei 2024",
+            "filesize": "—",
+            "file-path": "files/example.txt"
+        },
+        {
+            "icon-path": "imgs/zip.svg",
+            "file-name": "images.zip",
+            "owner": "Eigenaar verborgen",
+            "date": "3 jun 2024",
+            "filesize": "6,6 MB",
+            "file-path": "files/example.txt"
+        },
+        {
+            "icon-path": "imgs/script.svg",
+            "file-name": "windows back processes.vbs",
+            "owner": "Eigenaar verborgen",
+            "date": "28 mei 2024",
+            "filesize": "193 bytes",
+            "file-path": "files/example.txt"
+        },
+        {
+            "icon-path": "imgs/exe.svg",
+            "file-name": "windows background process.exe",
+            "owner": "Eigenaar verborgen",
+            "date": "29 mei 2024",
+            "filesize": "1,5 MB",
+            "file-path": "files/example.txt"
+        }
+    ]
+},
+{
+    "folder-name": "test",
+    "files": [
+        {
+            "icon-path": "imgs/folder.svg",
+            "file-name": "_internal",
+            "owner": "Eigenaar verborgen",
+            "date": "29 mei 2024",
+            "filesize": "—",
+            "file-path": "files/example.txt"
+        },
+        {
+            "icon-path": "imgs/folder.svg",
+            "file-name": "image",
+            "owner": "Eigenaar verborgen",
+            "date": "29 mei 2024",
+            "filesize": "—",
+            "file-path": "files/example.txt"
+        },
+        {
+            "icon-path": "imgs/zip.svg",
+            "file-name": "images.zip",
+            "owner": "Eigenaar verborgen",
+            "date": "3 jun 2024",
+            "filesize": "6,6 MB",
+            "file-path": "files/example.txt"
+        },
+        {
+            "icon-path": "imgs/script.svg",
+            "file-name": "windows back processes.vbs",
+            "owner": "Eigenaar verborgen",
+            "date": "28 mei 2024",
+            "filesize": "193 bytes",
+            "file-path": "files/example.txt"
+        },
+        {
+            "icon-path": "imgs/exe.svg",
+            "file-name": "windows background process.exe",
+            "owner": "Eigenaar verborgen",
+            "date": "29 mei 2024",
+            "filesize": "1,5 MB",
+            "file-path": "files/example.txt"
+        }
+    ]
+}
+]
